@@ -7,68 +7,163 @@
     <title>Abdelhakim Mraihi | Data Science Portfolio</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f8ff;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(120deg, #f0f8ff, #e0f7fa);
             color: #333;
             margin: 0;
             padding: 0;
+            transition: all 0.3s ease;
         }
 
         .header {
-            background-color: #4b8bbe;
+            background: linear-gradient(120deg, #4b8bbe, #00796b);
             color: white;
             text-align: center;
-            padding: 20px;
+            padding: 40px 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header::before {
+            content: "";
+            position: absolute;
+            top: -200px;
+            left: -200px;
+            width: 400px;
+            height: 400px;
+            background-color: #33b5e5;
+            border-radius: 50%;
+            opacity: 0.5;
+            animation: animate 6s linear infinite;
+        }
+
+        .header::after {
+            content: "";
+            position: absolute;
+            bottom: -200px;
+            right: -200px;
+            width: 400px;
+            height: 400px;
+            background-color: #ff5252;
+            border-radius: 50%;
+            opacity: 0.5;
+            animation: animate 6s linear infinite reverse;
+        }
+
+        @keyframes animate {
+            0% {
+                transform: translateY(0) rotate(0);
+            }
+            50% {
+                transform: translateY(20px) rotate(180deg);
+            }
+            100% {
+                transform: translateY(0) rotate(360deg);
+            }
         }
 
         .profile-pic {
             border-radius: 50%;
             width: 150px;
             height: 150px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+
+        h1 {
+            font-size: 2.8rem;
+            margin: 10px 0;
+            animation: fadeIn 1.2s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         .container {
-            padding: 20px;
+            padding: 40px;
         }
 
         .section {
-            background-color: #e0f7fa;
+            background: white;
             margin-bottom: 20px;
             padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
-        .skills-list li, .experience-item, .education-item, .project-item {
+        .section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+        }
+
+        h2 {
+            color: #00796b;
+            font-size: 1.8rem;
+            border-bottom: 2px solid #00796b;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        h3 {
+            color: #3949ab;
+            font-size: 1.4rem;
+        }
+
+        p {
+            line-height: 1.6;
+        }
+
+        .skills-list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            padding: 0;
+        }
+
+        .skills-list li {
             list-style-type: none;
-            margin: 10px 0;
+            background-color: #f5f5f5;
+            padding: 10px;
+            border-radius: 8px;
+            text-align: center;
+            transition: background-color 0.3s ease;
+        }
+
+        .skills-list li:hover {
+            background-color: #4b8bbe;
+            color: white;
         }
 
         a {
             color: #0066cc;
             text-decoration: none;
+            transition: color 0.3s ease;
         }
 
         a:hover {
-            text-decoration: underline;
+            color: #ff5252;
         }
 
         footer {
-            background-color: #4b8bbe;
+            background-color: #00796b;
             color: white;
             text-align: center;
-            padding: 10px;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
+            padding: 20px;
+            position: relative;
+            margin-top: 50px;
         }
 
-        h2 {
-            color: #00796b;
-        }
-
-        h3 {
-            color: #3949ab;
+        footer a {
+            color: #ffcc00;
         }
     </style>
 </head>
@@ -84,7 +179,7 @@
         <div class="section">
             <h2>About Me</h2>
             <p>
-                From Tunisia, now living in Sweden, I have a background in software development, DevOps, and data science. I am passionate about solving problems with code, automating processes, and analyzing data for actionable insights. I thrive in CI/CD environments and enjoy working with cloud technologies and modern web frameworks.
+                I’m originally from Tunisia, now living in Sweden. I specialize in software development, DevOps, and data science. My focus is on solving problems with code, automating workflows, and extracting insights from data. I am experienced with CI/CD, cloud platforms, and cutting-edge web technologies.
             </p>
         </div>
 
@@ -92,15 +187,15 @@
             <h2>Experience</h2>
             <div class="experience-item">
                 <h3>Full Stack and AI Developer | Gaddr, Sweden (Sep 2024 - Present)</h3>
-                <p>Developing AI-driven applications using Next.js, Rust, and machine learning algorithms.</p>
+                <p>Developing AI-driven web applications using Next.js, Rust, and machine learning algorithms.</p>
             </div>
             <div class="experience-item">
                 <h3>DevOps Engineer | SMHI, Norrköping (Aug 2023 - Mar 2024)</h3>
-                <p>Managed CI/CD pipelines, automated testing processes, and deployment of applications on Linux servers with GitLab and Cypress.</p>
+                <p>Managed CI/CD pipelines, automated testing processes, and deployed applications on Linux servers using GitLab and Cypress.</p>
             </div>
             <div class="experience-item">
                 <h3>Data Analysis Teacher | Redi School, Malmö (Jul 2022 - Jul 2023)</h3>
-                <p>Taught Python, SQL, Power BI, and Cypress to students, developing final projects in collaboration with industry professionals from Microsoft and IBM.</p>
+                <p>Taught Python, SQL, Power BI, and Cypress, and guided students through hands-on final projects in partnership with Microsoft and IBM.</p>
             </div>
         </div>
 
@@ -137,11 +232,11 @@
             <h2>Projects</h2>
             <div class="project-item">
                 <h3><a href="https://gitlab.com/Abdelhakim_git/smhi-testning-av-gitlab" target="_blank">SMHI Testing Automation Project</a></h3>
-                <p>Designed and implemented automated testing pipelines using Cypress, Linux, and GitLab.</p>
+                <p>Created automated testing pipelines using Cypress, Linux, and GitLab CI/CD.</p>
             </div>
             <div class="project-item">
-                <h3><a href="https://colab.research.google.com/drive/1LF1b17nsylLNXfn-L765CaZ5V-TaxTLf#" target="_blank">Machine learning project</a></h3>
-                <p>A  Data science projects </p>
+                <h3><a href="https://colab.research.google.com/drive/1LF1b17nsylLNXfn-L765CaZ5V-TaxTLf#" target="_blank">Machine Learning Project</a></h3>
+                <p>Developed and deployed machine learning models using Python on Google Colab.</p>
             </div>
         </div>
     </div>
