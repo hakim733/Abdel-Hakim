@@ -8,118 +8,73 @@
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(120deg, #f0f8ff, #e0f7fa);
-            color: #333;
+            background-color: #1e1e1e;
+            color: #d1d1d1;
             margin: 0;
             padding: 0;
             transition: all 0.3s ease;
         }
 
         .header {
-            background: linear-gradient(120deg, #4b8bbe, #00796b);
-            color: white;
+            background-color: #333;
+            color: #ffffff;
             text-align: center;
             padding: 40px 20px;
             position: relative;
             overflow: hidden;
         }
 
-        .header::before {
-            content: "";
-            position: absolute;
-            top: -200px;
-            left: -200px;
-            width: 400px;
-            height: 400px;
-            background-color: #33b5e5;
-            border-radius: 50%;
-            opacity: 0.5;
-            animation: animate 6s linear infinite;
-        }
-
-        .header::after {
-            content: "";
-            position: absolute;
-            bottom: -200px;
-            right: -200px;
-            width: 400px;
-            height: 400px;
-            background-color: #ff5252;
-            border-radius: 50%;
-            opacity: 0.5;
-            animation: animate 6s linear infinite reverse;
-        }
-
-        @keyframes animate {
-            0% {
-                transform: translateY(0) rotate(0);
-            }
-            50% {
-                transform: translateY(20px) rotate(180deg);
-            }
-            100% {
-                transform: translateY(0) rotate(360deg);
-            }
-        }
-
         .profile-pic {
             border-radius: 50%;
             width: 150px;
             height: 150px;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
             margin-top: 20px;
+            border: 3px solid #4b8bbe;
         }
 
         h1 {
             font-size: 2.8rem;
             margin: 10px 0;
-            animation: fadeIn 1.2s ease-in-out;
-        }
-
-        @keyframes fadeIn {
-            0% {
-                opacity: 0;
-                transform: translateY(-20px);
-            }
-            100% {
-                opacity: 1;
-                transform: translateY(0);
-            }
+            color: #ffcc00;
         }
 
         .container {
             padding: 40px;
+            max-width: 800px;
+            margin: 0 auto;
         }
 
         .section {
-            background: white;
+            background-color: #2e2e2e;
             margin-bottom: 20px;
             padding: 20px;
             border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
         .section:hover {
             transform: translateY(-5px);
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
         }
 
         h2 {
-            color: #00796b;
+            color: #ffcc00;
             font-size: 1.8rem;
-            border-bottom: 2px solid #00796b;
+            border-bottom: 2px solid #4b8bbe;
             padding-bottom: 10px;
             margin-bottom: 20px;
         }
 
         h3 {
-            color: #3949ab;
+            color: #66bb6a;
             font-size: 1.4rem;
         }
 
         p {
             line-height: 1.6;
+            color: #d1d1d1;
         }
 
         .skills-list {
@@ -131,34 +86,34 @@
 
         .skills-list li {
             list-style-type: none;
-            background-color: #f5f5f5;
+            background-color: #3a3a3a;
             padding: 10px;
             border-radius: 8px;
             text-align: center;
             transition: background-color 0.3s ease;
+            color: #ffcc00;
         }
 
         .skills-list li:hover {
             background-color: #4b8bbe;
-            color: white;
+            color: #ffffff;
         }
 
         a {
-            color: #0066cc;
+            color: #4b8bbe;
             text-decoration: none;
             transition: color 0.3s ease;
         }
 
         a:hover {
-            color: #ff5252;
+            color: #ffcc00;
         }
 
         footer {
-            background-color: #00796b;
-            color: white;
+            background-color: #333;
+            color: #d1d1d1;
             text-align: center;
             padding: 20px;
-            position: relative;
             margin-top: 50px;
         }
 
@@ -237,6 +192,14 @@
             <div class="project-item">
                 <h3><a href="https://colab.research.google.com/drive/1LF1b17nsylLNXfn-L765CaZ5V-TaxTLf#" target="_blank">Machine Learning Project</a></h3>
                 <p>Developed and deployed machine learning models using Python on Google Colab.</p>
+            </div>
+            <div class="project-item">
+                <h3><a href="https://github.com/hakim733/statistic-study" target="_blank">Statistics Study on GitHub</a></h3>
+                <p>Conducted an in-depth study in statistics, focusing on data analysis and visualization techniques using Python.</p>
+            </div>
+            <div class="project-item">
+                <h3><a href="https://colab.research.google.com/notebooks/intro.ipynb" target="_blank">Google Colab Machine Learning Projects</a></h3>
+                <p>Explore various machine learning projects and experiments developed in Google Colab notebooks.</p>
             </div>
         </div>
     </div>
